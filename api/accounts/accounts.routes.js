@@ -1,15 +1,15 @@
 express = require("express");
 accounts = require("../../accounts.js");
-router = express.Router();
-router.use(express.json());
-controller = require("./accounts.controllers.js");
+accountRouter = express.Router();
+accountRouter.use(express.json());
+accountController = require("./accounts.controllers.js");
 
-router.get("/", controller.getAccount);
+accountRouter.get("/", accountController.getAccount);
 
-router.post("/", controller.createAccount);
+accountRouter.post("/", accountController.createAccount);
 
-router.delete("/:id", controller.deleteAccount);
+accountRouter.delete("/:id", accountController.deleteAccount);
 
-router.put("/:id", controller.updateAccount);
+accountRouter.put("/:id", accountController.updateAccount);
 
-module.exports = router;
+module.exports = accountRouter;

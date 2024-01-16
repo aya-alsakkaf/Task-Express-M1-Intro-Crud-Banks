@@ -1,7 +1,6 @@
 accounts = require("../../accounts.js");
 const getAccount = (req, res) => {
-  console.log("here");
-  accounts.length = 0
+  accounts.length == 0
     ? res.status(404).json({ message: "No accounts found" })
     : res.status(200).json({ message: accounts });
 };
