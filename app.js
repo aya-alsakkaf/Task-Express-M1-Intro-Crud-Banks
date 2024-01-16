@@ -2,7 +2,7 @@ express = require("express");
 accountRouter = require("./api/accounts/accounts.routes.js");
 
 app = express();
-app.use("/accounts", accountRouter);
+app.use("/api/accounts", accountRouter);
 const PORT = 8000;
 
 app.listen(PORT, () => {
